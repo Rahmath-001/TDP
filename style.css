@@ -351,23 +351,6 @@ h6 {
   text-align: center;
 }
 
-/* Testimonials */
-.testimonial-card {
-  background: var(--primary-white);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.testimonial-video {
-  width: 100%;
-  height: 250px;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
 /* bolgs  */
 .card {
   background: var(--primary-white);
