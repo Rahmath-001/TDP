@@ -1,7 +1,7 @@
 class VideoTestimonialSlider {
     constructor() {
         this.currentSlide = 0;
-        this.totalSlides = 10;
+        this.totalSlides = 18;
         this.slidesPerView = 4;
         this.videoTrack = document.getElementById('videoTrack');
         this.dotsContainer = document.getElementById('dotsContainer');
@@ -37,6 +37,14 @@ class VideoTestimonialSlider {
             { name: "James Brown", title: "Digital Marketer" },
             { name: "Anna Lee", title: "Product Manager" },
             { name: "Chris Taylor", title: "Business Consultant" },
+            { name: "Sarah Johnson", title: "Marketing Director" },
+            { name: "Mike Chen", title: "Small Business Owner" },
+            { name: "Emily Rodriguez", title: "Freelance Designer" },
+            { name: "David Kim", title: "Tech Entrepreneur" },
+            { name: "Lisa Thompson", title: "E-commerce Manager" },
+            { name: "Alex Wilson", title: "Startup Founder" },
+            { name: "Maria Garcia", title: "Creative Director" },
+            { name: "James Brown", title: "Digital Marketer" },
         ];
 
         testimonials.forEach((testimonial, index) => {
@@ -51,10 +59,6 @@ class VideoTestimonialSlider {
                 </video>
                 <button class="play-button"></button>
                 <div class="video-overlay">
-                    <div class="video-info">
-                        <h4>${testimonial.name}</h4>
-                        <p>${testimonial.title}</p>
-                    </div>
                 </div>
             `;
 

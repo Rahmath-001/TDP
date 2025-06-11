@@ -332,7 +332,7 @@ h6 {
   box-shadow: var(--shadow);
   transition: var(--transition);
   margin-bottom: 2rem;
-  height: 400px;
+  height: 300px;
 }
 
 .doctor-card:hover {
