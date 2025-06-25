@@ -86,6 +86,33 @@
             line-height: 1.4;
         }
 
+        .logo-button-wrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo and play button */
+    z-index: 10;
+}
+
+.slide-logo {
+        z-index: 12;
+    margin-right: 195px;
+    margin-bottom: 18px;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%; /* Make circular if desired */
+    background-color: rgba(255, 255, 255, 0.2); /* Optional background for contrast */
+    padding: 5px; /* Optional padding */
+    transition: transform 0.3s ease;
+}
+
+.slide-logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
 .play-button {
     width: 70px;
     height: 70px;

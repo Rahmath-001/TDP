@@ -57,7 +57,10 @@ class VideoTestimonialSlider {
                     <source src="${videoPath}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                            <div class="logo-button-wrapper">
+                <img src="images/TDPlogosquare.png" alt="Logo" class="slide-logo" />
                 <button class="play-button"></button>
+            </div>
                 <div class="video-overlay">
                 </div>
             `;
