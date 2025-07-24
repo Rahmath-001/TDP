@@ -340,10 +340,20 @@ h6 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.doctor-img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
+    .doctor-img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      object-position: center;
+      transition: object-position 0.5s ease;
+    }
+
+    .crop-top {
+  object-position: center -30px; /* crop 30px from top, tweak as needed */
+}
+
+.crop-bottom {
+  object-position: center 1px; /* crop 30px from top, tweak as needed */
 }
 
 .doctor-info {
