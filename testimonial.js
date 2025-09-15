@@ -48,7 +48,7 @@ class VideoTestimonialSlider {
         ];
 
         testimonials.forEach((testimonial, index) => {
-            const videoPath = `videos/video${index}.mp4`;
+            const videoPath = `${BASE_URL}videos/video${index}.mp4`;
 
             const slide = document.createElement('div');
             slide.className = 'video-slide';
@@ -58,7 +58,7 @@ class VideoTestimonialSlider {
                     Your browser does not support the video tag.
                 </video>
                             <div class="logo-button-wrapper">
-                <img src="images/TDPlogosquare.png" alt="Logo" class="slide-logo" />
+                <img src="${BASE_URL}images/TDPlogosquare.png" alt="Logo" class="slide-logo" />
                 <button class="play-button"></button>
             </div>
                 <div class="video-overlay">
@@ -124,24 +124,26 @@ class VideoTestimonialSlider {
         console.log("Event bindings complete.");
     }
 
-    updateSlider() {
-        const slideWidth = this.videoTrack.children[0]?.offsetWidth || 280;
-        const offset = -this.currentSlide * slideWidth * this.slidesPerView;
-        this.videoTrack.style.transform = `translateX(${offset}px)`;
+updateSlider() {
+  if (window.innerWidth <= 768) {
+    // On mobile, let scroll handle it
+    this.videoTrack.style.transform = 'none';
+    return;
+  }
 
-        console.log(`Slider updated: Transform = ${this.videoTrack.style.transform}`);
+  const slideWidth = this.videoTrack.children[0]?.offsetWidth || 280;
+  const offset = -this.currentSlide * slideWidth * this.slidesPerView;
+  this.videoTrack.style.transform = `translateX(${offset}px)`;
 
-        const dots = this.dotsContainer.querySelectorAll('.dot');
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === this.currentSlide);
-        });
+  const dots = this.dotsContainer.querySelectorAll('.dot');
+  dots.forEach((dot, index) => {
+    dot.classList.toggle('active', index === this.currentSlide);
+  });
 
-        const maxSlides = Math.ceil(this.totalSlides / this.slidesPerView) - 1;
-        this.prevBtn.disabled = this.currentSlide === 0;
-        this.nextBtn.disabled = this.currentSlide >= maxSlides;
-
-        console.log(`Button states - Prev: ${this.prevBtn.disabled}, Next: ${this.nextBtn.disabled}`);
-    }
+  const maxSlides = Math.ceil(this.totalSlides / this.slidesPerView) - 1;
+  this.prevBtn.disabled = this.currentSlide === 0;
+  this.nextBtn.disabled = this.currentSlide >= maxSlides;
+}
 
     prevSlide() {
         if (this.currentSlide > 0) {
