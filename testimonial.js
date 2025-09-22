@@ -54,11 +54,11 @@ class VideoTestimonialSlider {
             slide.className = 'video-slide';
             slide.innerHTML = `
                 <video loop preload="metadata">
-                    <source src="${videoPath}" type="video/mp4">
+                    <source src="${videoPath}" type="video/mp4" loading="lazy">
                     Your browser does not support the video tag.
                 </video>
                             <div class="logo-button-wrapper">
-                <img src="${BASE_URL}images/TDPlogosquare.png" alt="Logo" class="slide-logo" />
+                <img src="${BASE_URL}images/TDPlogosquare.png" alt="Logo" class="slide-logo" loading="lazy" />
                 <button class="play-button"></button>
             </div>
                 <div class="video-overlay">
