@@ -497,3 +497,22 @@ h6 {
     padding-top: calc(60px + var(--navbar-height));
   }
 }
+
+
+/* Mobile Section Order Fix */
+@media (max-width: 768px) {
+  #main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #tourism { order: 1; }        /* Dental Tourism */
+  #services { order: 2; }       /* Featured Services */
+  #doctors { order: 3; }        /* Meet Our Team */
+  #testimonials { order: 4; }   /* Patient Testimonials */
+  #specialties { order: 5; }   /*  Our Specialities */
+  #about { order: 6; } 
+  #blog { order: 7; }           /* Blogs */
+  #contact { order: 8; }        /* Contact */
+}
+
